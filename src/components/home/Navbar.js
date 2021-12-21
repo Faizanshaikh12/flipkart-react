@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     component: {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: '55px 80px 0 80px'
+        margin: '60px 80px 0 80px'
     },
     container: {
         textAlign: 'center'

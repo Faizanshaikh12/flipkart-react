@@ -1,12 +1,17 @@
 import Header from "./components/header/Header";
 import Home from "./components/home/Home"
+import Cart from "./components/cart/Cart"
+import {BrowserRouter, Route, Switch} from "react-router-dom";
 
 function App() {
     return (
-        <div>
+        <BrowserRouter>
             <Header/>
-            <Home/>
-        </div>
+            <Switch>
+                <Route path='/' component={Home} exact/>
+                <Route path='/cart' component={Cart}/>
+            </Switch>
+        </BrowserRouter>
     );
 }
 

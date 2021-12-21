@@ -1,6 +1,7 @@
 import React from 'react';
 import {Badge, Box, Button, makeStyles, Typography} from "@material-ui/core";
 import {ShoppingCart} from "@material-ui/icons";
+import Link from "react-router-dom/es/Link";
 
 const useStyles = makeStyles({
     login: {
@@ -17,7 +18,9 @@ const useStyles = makeStyles({
         display: 'flex',
         '& > *': {
             marginRight: 50,
-            alignItems: 'center'
+            alignItems: 'center',
+            textDecoration: 'none',
+            color: '#ffffff'
         }
     },
     container:{
@@ -30,14 +33,14 @@ function HeaderBtn() {
     const classes = useStyles();
     return (
         <Box className={classes.wrap}>
-            <Button variant="contained" className={classes.login}>Login</Button>
-            <Typography style={{marginTop: 5}}>More</Typography>
-            <Box className={classes.container}>
+            <Link><Button variant="contained" className={classes.login}>Login</Button></Link>
+            <Link><Typography style={{marginTop: 5}}>More</Typography></Link>
+            <Link to='/cart' className={classes.container}>
                 <Badge color="secondary" badgeContent={2}>
                     <ShoppingCart/>
                 </Badge>
                 <Typography style={{marginLeft: 10}}>Cart</Typography>
-            </Box>
+            </Link>
         </Box>
     );
 }
