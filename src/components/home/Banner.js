@@ -31,8 +31,8 @@ function Banner() {
                   }}
                   className={classes.carousel}
         >
-            {bannerData.map(image => (
-                <img src={image} className={classes.image}/>
+            {bannerData.map((image, index) => (
+                <img src={image} key={index} className={classes.image}/>
             ))}
         </Carousel>);
 }

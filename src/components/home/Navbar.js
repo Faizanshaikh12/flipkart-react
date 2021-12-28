@@ -6,7 +6,7 @@ const useStyles = makeStyles({
     component: {
         display: 'flex',
         justifyContent: 'space-between',
-        margin: '60px 80px 0 80px'
+        margin: '60px 80px 5px 80px'
     },
     container: {
         textAlign: 'center'
@@ -24,8 +24,8 @@ function Navbar() {
     const classes = useStyles();
     return (
         <Box className={classes.component}>
-            {navData.map(data => (
-                <Box className={classes.container}>
+            {navData.map((data, index) => (
+                <Box className={classes.container} key={index}>
                     <img src={data.url} className={classes.image}/>
                     <Typography className={classes.text}>{data.text}</Typography>
                 </Box>

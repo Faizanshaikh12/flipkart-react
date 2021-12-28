@@ -2,7 +2,7 @@ import React from 'react';
 import {AppBar, Toolbar, makeStyles, Typography, Box, withStyles} from "@material-ui/core";
 import SearchBar from "./SearchBar";
 import HeaderBtn from "./HeaderBtn";
-import Link from "react-router-dom/es/Link";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles({
     header: {
