@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Banner from "./Banner";
 import {Box, makeStyles} from "@material-ui/core";
 import Slide from "./Slide";
+import MidSection from "./MidSection";
 
 const useStyles = makeStyles({
     component: {
@@ -29,9 +30,10 @@ function Home() {
                         <Slide/>
                     </Box>
                     <Box className={classes.rightWrap}>
-                        <img src={adURL} alt={adURL} style={{width: 230}}/>
+                        <img src={adURL} alt={adURL} style={{width: 220, height: 'auto'}} />
                     </Box>
                 </Box>
+                <MidSection/>
             </Box>
         </div>
     );

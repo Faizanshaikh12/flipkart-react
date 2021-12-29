@@ -31,7 +31,7 @@ const useStyles = makeStyles({
     }, text: {
         fontSize: 14, marginTop: 5
     }, wrap: {
-        padding: '35px 15px'
+        padding: '16px 15px'
     }
 })
 
