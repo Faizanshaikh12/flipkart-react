@@ -13,7 +13,7 @@ function MidSection() {
     const coronaURL = 'https://rukminim1.flixcart.com/flap/3006/433/image/4789bc3aefd54494.jpg?q=50';
     return (<>
         <Box className={classes.wrap}>
-            {imageURL.map(image => (<img src={image} style={{width: '33%'}}/>))}
+            {imageURL.map(image => (<img src={image} style={{width: '33%'}} key={image}/>))}
         </Box>
         <img src={coronaURL} alt={coronaURL} style={{width: '100%', marginTop: 20}}/>
     </>);
