@@ -11,6 +11,7 @@ const api = axios.create({
 
 // List of api endpoints
 export const signup = (data) => api.post('/signup', data);
+export const signin = (data) => api.post('/login', data);
 // export const verifyOtp = (data) => api.post('/api/verify-otp', data);
 // export const activate = (data) => api.post('/api/activate', data);
 // export const roomCreate = (data) => api.post('/api/rooms', data);

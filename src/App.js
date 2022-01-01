@@ -3,9 +3,11 @@ import Home from "./components/home/Home"
 import Cart from "./components/cart/Cart"
 import {BrowserRouter, Route, Switch} from "react-router-dom";
 import {TemplateProvider} from './templates/TemplateProvider';
+import ContextProvider from "./context/ContextProvider";
 
 function App() {
     return (<TemplateProvider>
+        <ContextProvider>
             <BrowserRouter>
                 <Header/>
                 <Switch>
@@ -13,7 +15,8 @@ function App() {
                     <Route path='/cart' component={Cart}/>
                 </Switch>
             </BrowserRouter>
-        </TemplateProvider>);
+        </ContextProvider>
+    </TemplateProvider>);
 }
 
 export default App;
